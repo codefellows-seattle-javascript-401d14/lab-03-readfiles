@@ -7,7 +7,7 @@ describe('this is testing the readFile module', function(){
   describe('file that doesnt exist', function(){
     it('should pass an error into the callback', function(done){
       readFile([`${__dirname}/../assets/fake-file.txt`], function(err,data){
-        expect(err).to.equal(err);
+        expect(!!err).to.equal(true);
         console.log(data);
         done();
       });
