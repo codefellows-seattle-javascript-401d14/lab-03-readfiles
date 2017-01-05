@@ -1,0 +1,21 @@
+{
+  "name": "lab-jaren",
+  "version": "1.0.0",
+  "description": "lab-03-readfiles",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/eslint/bin/eslint.js .",
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "keywords": [],
+  "author": "jaren.escueta@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.12.2",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "async": "^2.1.4"
+  }
+}
