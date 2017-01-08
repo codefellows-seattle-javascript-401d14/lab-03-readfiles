@@ -8,7 +8,7 @@
   * Submit a pull request to this repository
   * Submit a link to your pull request on canvas
   * Submit a question, observation, and how long you spent on canvas  
-  
+
 ## Learning Objectives  
 * Students will be able to implement file system input and output
 * Students will be able to work with binary data
@@ -26,13 +26,13 @@ Your lab directory must include
 * **.gitignore** -- with a robust gitignore
 * **.eslintrc** -- with the class .eslintrc file
 * **.eslintignore** -- with the class .eslintignore
-* **.package.json** -- with all dependencies and dev-dependencies 
+* **.package.json** -- with all dependencies and dev-dependencies
 * **lib/** -- directory for holding your programs helper modules
 * **test/** -- directory for holding your programs unit and integration tests
 * **assets/** -- direcotry for holding text files used by the program
  * there should be three files in this directory
 * **index.js** -- the main program file
- 
+
 #### Feature Tasks  
 * create a module **lib/read-files.js** that returns a single function
 * `readFiles` should have two inputs
@@ -41,7 +41,7 @@ Your lab directory must include
 * `readFiles` should read all three files into memory and create an new array of the text from each file
  * if any error occurs the callback should be invoked with the error and the function should exit
  * if the new array is successfully created the callback should be invoked with (null, result)
- * **keep the resulting data in the same order as the file paths array** 
+ * **keep the resulting data in the same order as the file paths array**
 
 * create a module **index.js** that invokes the readfile module with three command line arguments
  * if the user does not input **exactly** three files the program should log a usage error
@@ -56,9 +56,16 @@ Your lab directory must include
 ## BONUS 1pt
 * create a second module `readManyFiles` that can read an array of any length of file paths and return an array of coresponding text data
  * rewrite index.js to use `readManyFiles`
- 
+
 ## Rubric  
 * 2ps Configuration
 * 3pts Feature Tasks
 * 3pts Tests
 * 2pts Documentation
+
+## Using Done In callbacks
+* The word done will be passed in a callback function, mocha detects this and is
+notified to stop the test inside that particular set of testing. It is important
+to ensure that Mocha will wait for it to be called. If it is not called, mocha
+will not know when to stop and it will set an error saying it passed 2000ms or so
+and it will not test correctly. 

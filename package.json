@@ -1,0 +1,23 @@
+{
+  "name": "lab-03-readfiles",
+  "version": "1.0.0",
+  "description": "lab 3 assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codefellows-seattle-javascript-401d14/lab-03-readfiles.git"
+  },
+  "author": "thomasxmartinez@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codefellows-seattle-javascript-401d14/lab-03-readfiles/issues"
+  },
+  "homepage": "https://github.com/codefellows-seattle-javascript-401d14/lab-03-readfiles#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
