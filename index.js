@@ -11,4 +11,4 @@ const main = module.exports = function(argv){
   });
 };
 
-console.log(main(process.argv));
+main(process.argv);

@@ -4,19 +4,6 @@ const fs = require('fs');
 const expect = require('chai').expect;
 const index = require('../lib/read-files.js');
 
-// let stuff = fs.readFile(`${__dirname}/../assets/stuff.txt`, (err, data) => {
-//   if (err) return console.error(err);
-//   return console.log(data.toString());
-// });
-// let stuff2 = fs.readFile(`${__dirname}/../assets/stuff2.txt`, (err, data) => {
-//   if (err) return console.error(err);
-//   return console.log(data.toString());
-// });
-// let stuff3 = fs.readFile(`${__dirname}/../assets/stuff3.txt`, (err, data) => {
-//   if (err) return console.error(err);
-//   return console.log(data.toString());
-// });
-
 let filePaths = [
   `${__dirname}/../assets/stuff.txt`,
   `${__dirname}/../assets/stuff2.txt`,
