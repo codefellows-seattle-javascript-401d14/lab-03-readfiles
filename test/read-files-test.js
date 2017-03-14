@@ -14,14 +14,17 @@ describe('testing module readFiles', function(){
       });
     });
   });
-  describe('valid inputs', function(){
-    var files = [`${__dirname}/../assets/pulp-one.txt`,
-      `${__dirname}/../assets/fiction-two.txt`,
-      `${__dirname}/../assets/slj-three.txt`,
+
+  describe('with valid inputs', function(){
+    var inputFiles = [`${__dirname}/../assets/star.txt`,
+      `${__dirname}/../assets/wars.txt`,
+      `${__dirname}/../assets/ipsum.txt`,
     ];
-    it('should pass an array that matches with the files array', function(done){
-      var result = ['Look, just because I don\'t be givin\' no man a foot massage don\'t make it right for Marsellus to throw Antwone into a glass motherfuckin\' house, fuckin\' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, \'cause I\'ll kill the motherfucker, know what I\'m sayin\'?My money\'s in that office, right? If she start giving me some bullshit about it ain\'t there, and we got to go someplace else and get it, I\'m gonna shoot you in the head then and there. Then I\'m gonna shoot that bitch in the kneecaps, find out where my goddamn money is. She gonna tell me too. Hey, look at me when I\'m talking to you, motherfucker. You listen: we go in there, and that nigga Winston or anybody else is in there, you the first motherfucker to get shot. You understand?The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother\'s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.'];
-      readFiles(files, function(err, data) {
+    it('should pass an array of text data that maps from the file paths array', function(done){
+      var result = [ 'Well, that\'s the trick, isn\'t it? And it\'s going to cost you something extra. Ten thousand in advance. Ten thousand? We could almost buy our own ship for that! But who\'s going to fly it, kid! You? You bet I could. I\'m not such a bad pilot myself! We don\'t have to sit here and listen... We haven\'t that much with us. But we could pay you two thousand now, plus fifteen when we reach Alderaan. Seventeen, huh! Okay. You guys got yourself a ship. We\'ll leave as soon as you\'re ready. Docking bay Ninety-four. Ninety-four. Looks like somebody\'s beginning to take an interest in your handiwork. All right, we\'ll check it out.\n',
+        'Open up in there! Oh, no! There isn\'t any other way out. I can\'t hold them off forever! Now what? This is some rescue. When you came in here, didn\'t you have a plan for getting out? He\'s the brains, sweetheart. Well, I didn\'t... What the hell are you doing? Somebody has to save our skins. Into the garbage chute, wise guy. Get in there you big furry oaf! I don\'t care what you smell! Get in there and don\'t worry about it. Wonderful girl! Either I\'m going to kill her or I\'m beginning to like her. Get in there!\n',
+        'What? Yahoo! Look out! You\'re all clear, kid. Now let\'s blow this thing and go home! Stand by to fire at Rebel base. Standing by. Great shot, kid. That was one in a million. Remember, the Force will be with you...always.\n' ];
+      readFiles(inputFiles, function(err, data){
         expect(err).to.equal(null);
         expect(data[0]).to.equal(result[0]);
         expect(data[1]).to.equal(result[1]);
@@ -30,4 +33,5 @@ describe('testing module readFiles', function(){
       });
     });
   });
+
 });
